@@ -16,5 +16,15 @@ public class GettingStarted {
 //        } else {
 //            System.out.println("number1 = number2");
 //        }
+
+//        String string1 = "String1";
+//        String string2 = "String2";
+//        String result;
+//        if (string1.equals(string2)){
+//            result = "equals";
+//        } else {
+//            result = "not equals";
+//        }
+//        System.out.println(result);
     }
 }
