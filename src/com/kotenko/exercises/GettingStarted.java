@@ -26,5 +26,14 @@ public class GettingStarted {
 //            result = "not equals";
 //        }
 //        System.out.println(result);
+
+//        System.out.println("Amigoscode".toUpperCase());
+
+//        String name = "amigoscode";
+//        String firstLetter = name.substring(0, 1).toUpperCase();
+//        String restWord = name.substring(1);
+//        System.out.println(firstLetter + restWord);
+
+//        System.out.println("fixed");
     }
 }
