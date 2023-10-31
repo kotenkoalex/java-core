@@ -1,6 +1,6 @@
 package com.kotenko.exercises;
 
-public class LoopsAndArrays {
+public class Ex2LoopsAndArrays {
     public static void main(String[] args) {
 //        int[] array = new int[3];
 //        System.out.println(Arrays.toString(array));
