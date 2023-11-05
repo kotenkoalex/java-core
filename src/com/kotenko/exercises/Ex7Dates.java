@@ -1,6 +1,7 @@
 package com.kotenko.exercises;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Ex7Dates {
     public static void main(String[] args) {
@@ -18,11 +19,15 @@ public class Ex7Dates {
     }
 
     private int calculateAge(LocalDate date) {
-        int currentYear = LocalDate.now().getYear();
-        int birthYear = date.getYear();
-        if (currentYear >= birthYear) {
-            return currentYear - birthYear;
+        Period period = Period.between(date, LocalDate.now());
+
+        int years = period.getYears();
+        int month = period.getMonths();
+        int days = period.getDays();
+
+        if (month < 0 || (month == 0 && days < 0)) {
+            years--;
         }
-        return -1;
+        return years;
     }
 }

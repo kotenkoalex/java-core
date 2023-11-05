@@ -2,7 +2,7 @@ package com.kotenko.exercises;
 
 import java.util.Arrays;
 
-public class ExEnums {
+public class Ex8Enums {
     enum ThirstSize {
         S, M, L, XL, XXL, XXXL;
     }
