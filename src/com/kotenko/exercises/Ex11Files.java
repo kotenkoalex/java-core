@@ -1,8 +1,7 @@
 package com.kotenko.exercises;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
 
 public class Ex11Files {
 
@@ -34,8 +33,22 @@ public class Ex11Files {
     private final static String FILE_NAME = "data.csv";
 
     public static void main(String[] args) {
-        createFile(PATH, FILE_NAME);
-        writeFile(PATH, FILE_NAME, DATA);
+//        createFile(PATH, FILE_NAME);
+//        writeFile(PATH, FILE_NAME, DATA);
+        System.out.println(readFile(PATH, FILE_NAME));
+    }
+
+    private static String readFile(String path, String fileName) {
+        StringBuilder result = new StringBuilder(new String());
+        File file = new File(path + fileName);
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNext()){
+                result.append(scanner.nextLine());
+            }
+        } catch (Exception e) {
+            System.out.println("File has not been read");
+        }
+        return result.toString();
     }
 
     private static void writeFile(String path, String fileName, String data) {
