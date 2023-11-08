@@ -29,45 +29,55 @@ public class Ex11Files {
                 20,Gretchen,Abell,gabellj@1688.com,F
             """.trim();
 
-    private final static String PATH = "src/com/kotenko/exercises/files/";
-    private final static String FILE_NAME = "data.csv";
-
     public static void main(String[] args) {
-//        createFile(PATH, FILE_NAME);
-//        writeFile(PATH, FILE_NAME, DATA);
-        System.out.println(readFile(PATH, FILE_NAME));
+        File file = createFile("src/com/kotenko/exercises/data.csv");
+        writeFile(file, DATA, false);
+//        System.out.println(readFile(file));
+        readFileAndSkipFirstLine(file);
     }
 
-    private static String readFile(String path, String fileName) {
-        StringBuilder result = new StringBuilder(new String());
-        File file = new File(path + fileName);
-        try (Scanner scanner = new Scanner(file)) {
-            while (scanner.hasNext()){
-                result.append(scanner.nextLine());
+    private static void readFileAndSkipFirstLine(File file) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+            String header = bufferedReader.readLine();//skip first line
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
             }
-        } catch (Exception e) {
-            System.out.println("File has not been read");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private static String readFile(File file) {
+        StringBuilder result = new StringBuilder();
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNext()) {
+                result.append(scanner.nextLine().trim()).append("\n");
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
         return result.toString();
     }
 
-    private static void writeFile(String path, String fileName, String data) {
-        try (FileWriter fileWriter = new FileWriter(path + fileName)) {
+    private static void writeFile(File file, String data, boolean appendable) {
+        try (FileWriter fileWriter = new FileWriter(file, appendable)) {
             fileWriter.write(data);
-            System.out.println("File has been written");
         } catch (IOException e) {
-            System.out.println("File has not been written");
+            System.out.println(e.getMessage());
         }
     }
 
-    private static void createFile(String path, String fileName) {
+    private static File createFile(String path) {
         try {
-            File file = new File(PATH + FILE_NAME);
-            if (file.createNewFile()) {
-                System.out.println("File has been created");
+            File file = new File(path);
+            if (!file.exists()) {
+                file.createNewFile();
             }
-        } catch (IOException ioException) {
-            System.out.println("File has not been created");
+            return file;
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            throw new IllegalArgumentException(e);
         }
     }
 }
