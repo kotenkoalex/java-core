@@ -1,20 +1,18 @@
 package com.kotenko;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello what is your name?");
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        System.out.println("Hello: " + input);
+        Cat rose1 = new Cat("Rose", 2, "Blue");
+        System.out.println(rose1);
 
-        System.out.println("What is your age: ");
-        int age = scanner.nextInt();
-        if(age < 15){
-            System.out.println("Your are a child");
-        } else {
-            System.out.println("Your are an adult");
-        }
+        Cat rose2 = new Cat("Rose", 1, "Blue");
+        System.out.println(rose2);
+
+        System.out.println(rose1.equals(rose2));
+
+        Cat[] cats = {rose1, rose2};
+
+        Person alex = new Person("Alex", "Montana", Gender.MALE, cats);
+        System.out.println(alex);
     }
 }
