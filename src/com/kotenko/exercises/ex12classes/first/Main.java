@@ -1,4 +1,4 @@
-package com.kotenko.exercises.ex12classes;
+package com.kotenko.exercises.ex12classes.first;
 
 public class Main {
     public static void main(String[] args) {

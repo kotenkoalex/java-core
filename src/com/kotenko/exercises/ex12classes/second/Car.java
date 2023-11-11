@@ -1,22 +1,22 @@
-package com.kotenko.exercises.ex12classes;
+package com.kotenko.exercises.ex12classes.second;
 
 public class Car {
-    private String manufacturer;
+    private String model;
     private double price;
     private Engine engine;
 
-    public Car(String manufacturer, double price, Engine engine) {
-        this.manufacturer = manufacturer;
+    public Car(String model, double price, Engine engine) {
+        this.model = model;
         this.price = price;
         this.engine = engine;
     }
 
-    public String getManufacturer() {
-        return manufacturer;
+    public String getModel() {
+        return model;
     }
 
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public double getPrice() {
@@ -38,7 +38,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "manufacturer='" + manufacturer + '\'' +
+                "model='" + model + '\'' +
                 ", price=" + price +
                 ", engine=" + engine +
                 '}';

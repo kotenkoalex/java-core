@@ -1,4 +1,4 @@
-package com.kotenko;
+package com.kotenko.exercises.ex12classes.second;
 
 import java.util.Objects;
 
