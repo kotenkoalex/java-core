@@ -1,5 +1,7 @@
 package com.kotenko.exercises.ex12classes.first;
 
+import java.util.Arrays;
+
 public class Dealership {
     private String name;
 
@@ -23,6 +25,13 @@ public class Dealership {
 
     public Car[] getCarsInStock() {
         return carsInStock;
+    }
+
+    public Car findCarByManufacturer(String manufacturer) {
+        return Arrays.stream(carsInStock)
+                .filter(it -> it.getManufacturer().equals(manufacturer))
+                .findFirst()
+                .orElse(null);
     }
 
     public void addCarToStock(Car car) {

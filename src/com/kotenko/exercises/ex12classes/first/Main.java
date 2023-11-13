@@ -7,8 +7,9 @@ public class Main {
         Dealership dealership = new Dealership("MuAuto", 2);
 
         dealership.addCarToStock(new Car("Mazda", 10000, Engine.PETROL));
-        dealership.addCarToStock(new Car("BMW", 12000, Engine.PETROL));
+        dealership.addCarToStock(new Car("Mazda", 12000, Engine.PETROL));
 
         Arrays.stream(dealership.getCarsInStock()).forEach(System.out::println);
+        System.out.println(dealership.findCarByManufacturer("Mazda1"));
     }
 }
