@@ -1,4 +1,4 @@
-package com.kotenko.exercises.ex12classes.second;
+package com.kotenko.exercises.ex12classes.second.car;
 
 public class Car {
     private String model;

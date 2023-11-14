@@ -1,4 +1,9 @@
-package com.kotenko.exercises.ex12classes.second;
+package com.kotenko.exercises.ex12classes.second.person;
+
+import com.kotenko.exercises.ex12classes.second.Address;
+import com.kotenko.exercises.ex12classes.second.House;
+import com.kotenko.exercises.ex12classes.second.car.Car;
+import com.kotenko.exercises.ex12classes.second.cat.Cat;
 
 import java.util.Arrays;
 

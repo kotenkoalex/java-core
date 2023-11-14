@@ -1,6 +1,6 @@
 package com.kotenko.exercises;
 
-import com.kotenko.exercises.ex12classes.second.Person;
+import com.kotenko.exercises.ex12classes.second.person.Person;
 
 public class Main {
     public static void main(String[] args) {
