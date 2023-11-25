@@ -1,13 +1,11 @@
 package com.kotenko;
 
-import com.kotenko.oop.polymorphism.*;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car();
-        Bicycle bicycle = new Bicycle();
-        Scooter scooter = new Scooter();
-        Vehicle[]vehicles = {car, bicycle, scooter};
-        Person person = new Person("Alex", vehicles);
+        String brand = null;
+        Optional<String> brandOptional = Optional.ofNullable(brand);
+        System.out.println(brandOptional.isEmpty());
     }
 }
