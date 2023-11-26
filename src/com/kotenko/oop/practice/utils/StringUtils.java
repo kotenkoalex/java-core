@@ -1,4 +1,4 @@
-package com.kotenko.exercises.ex12classes.second.utils;
+package com.kotenko.oop.practice.utils;
 
 public class StringUtils {
     public static boolean isEmpty(String s) {

@@ -1,4 +1,4 @@
-package com.kotenko.exercises.ex12classes.second.garage;
+package com.kotenko.oop.practice.garage;
 
 import com.kotenko.exercises.ex12classes.first.Car;
 

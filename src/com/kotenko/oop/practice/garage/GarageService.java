@@ -1,6 +1,6 @@
-package com.kotenko.exercises.ex12classes.second.garage;
+package com.kotenko.oop.practice.garage;
 
-import com.kotenko.exercises.ex12classes.second.car.Car;
+import com.kotenko.oop.practice.car.Car;
 
 public class GarageService {
     public boolean addCarToGarage(Car car, Garage garage) {

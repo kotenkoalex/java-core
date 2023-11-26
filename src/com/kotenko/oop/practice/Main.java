@@ -1,9 +1,8 @@
-package com.kotenko.exercises.ex12classes.second;
+package com.kotenko.oop.practice;
 
-import com.kotenko.exercises.ex12classes.second.car.Car;
-import com.kotenko.exercises.ex12classes.second.car.CarService;
-import com.kotenko.exercises.ex12classes.second.car.Engine;
-import com.kotenko.exercises.ex12classes.second.person.Person;
+import com.kotenko.oop.practice.car.Car;
+import com.kotenko.oop.practice.car.CarService;
+import com.kotenko.oop.practice.car.Engine;
 
 import java.util.Arrays;
 
