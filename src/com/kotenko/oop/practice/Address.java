@@ -1,4 +1,4 @@
-package com.kotenko.exercises.ex12classes.second;
+package com.kotenko.oop.practice;
 
 public class Address {
     private String firstLine;

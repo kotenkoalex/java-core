@@ -1,6 +1,6 @@
-package com.kotenko.exercises.ex12classes.second.person;
+package com.kotenko.oop.practice.person;
 
-import com.kotenko.exercises.ex12classes.second.utils.StringUtils;
+import com.kotenko.oop.practice.utils.StringUtils;
 
 public class PersonService {
 

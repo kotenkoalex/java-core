@@ -1,4 +1,4 @@
-package com.kotenko.exercises.ex12classes.second.car;
+package com.kotenko.oop.practice.car;
 
 public class CarService {
     private CarDao carDao;

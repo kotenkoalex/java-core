@@ -1,4 +1,4 @@
-package com.kotenko.exercises.ex12classes.second.cat;
+package com.kotenko.oop.practice.cat;
 
 import java.util.Objects;
 
