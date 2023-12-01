@@ -20,7 +20,7 @@ public class GarageDao implements IGarageDao {
             System.out.println("Added");
             System.out.println(Arrays.toString(cars));
         } else {
-            throw new IllegalArgumentException("Wrong garage id");
+            throw new IllegalArgumentException("Wrong garage age");
         }
     }
 }
