@@ -1,4 +1,4 @@
-package com.kotenko;
+package com.kotenko.exercises;
 
 import com.github.javafaker.Faker;
 
