@@ -3,6 +3,7 @@ package com.kotenko.spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -14,9 +15,10 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
 
-    @GetMapping("/")
-    public GreetResponse hello() {
-        return new GreetResponse("Hello", List.of("list"), new Person("name"));
+    @GetMapping("/greet")
+    public GreetResponse hello(@RequestParam(value = "name", required = false) String name) {
+        String greetMessage = name == null || name.isBlank() ? "Hello" : "Hello " + name;
+        return new GreetResponse(greetMessage, List.of("list"), new Person("name"));
     }
 
     record GreetResponse(String greet, List<String> lang, Person person) {
