@@ -1,5 +1,6 @@
 package com.kotenko.spring.customer;
 
+import com.kotenko.spring.exception.ResourceNotFound;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,6 @@ public class CustomerService {
 
     public Customer getCustomerById(Integer id) {
         return customerDao.selectCustomerById(id)
-                .orElseThrow(IllegalArgumentException::new);
+                .orElseThrow(() -> new ResourceNotFound("id not found: " + id));
     }
 }
