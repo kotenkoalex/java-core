@@ -1,14 +1,36 @@
 package com.kotenko.spring.customer;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
-class Customer {
+@Entity
+public class Customer {
+    @Id
+    @SequenceGenerator(
+            name = "customer_id_sequence",
+            sequenceName = "customer_id_sequence"
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "customer_id_sequence"
+    )
     private Integer id;
+
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
     private int age;
 
     public Customer() {
+    }
+
+    public Customer(String name, String email, int age) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
     }
 
     public Customer(Integer id, String name, String email, int age) {
